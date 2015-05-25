@@ -17,6 +17,7 @@ len=100	#FB Aminoacid length cutoff
 	
 fastastring()
 {
+#transform fasta file from block format to single-line format	
 while read line; do
         if [ "${line:0:1}" = ">" ]; then
 		if [ ! -z "$seq" ]; then
